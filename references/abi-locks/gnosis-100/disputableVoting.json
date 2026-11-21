@@ -1,0 +1,27 @@
+{
+  "contractName": "DisputableVoting",
+  "address": "0xfbd0b2726070a9d6aff6d7216c9e9340eae68b2a",
+  "chainId": 100,
+  "source": "https://github.com/1Hive/disputable-voting-app/blob/master/deployments/xdai/DisputableVoting.json",
+  "implementationArtifactAddress": "0x3E7F5a5dc128291171401fbEfaC648652C6E6180",
+  "runtimeBytecodeHash": "0xe9ceeeac70d569ac5c96b051ae87c43ed8aaca6ed2328010b1889414fa5b6963",
+  "selectors": {
+    "newVote(bytes,bytes)": "0x0a0932da",
+    "vote(uint256,bool)": "0xc9d27afe",
+    "executeVote(uint256,bytes)": "0x955131ed",
+    "getVote(uint256)": "0x5a55c1f0",
+    "getSetting(uint256)": "0x40b43701",
+    "getCastVote(uint256,address)": "0x980704cf",
+    "canVote(uint256,address)": "0xcdb2867b",
+    "canExecute(uint256)": "0xcc63604a",
+    "isVoteOpenForVoting(uint256)": "0x143b8f27",
+    "votesLength()": "0xde4f6347",
+    "settingsLength()": "0x4b4e45cf",
+    "token()": "0xfc0c546a"
+  },
+  "notes": [
+    "ABI fragments are sourced from the official 1Hive disputable-voting-app xDai deployment artifact and source contract.",
+    "The 1Hive app address is an Aragon app proxy; implementationArtifactAddress records the deployment artifact address for source/ABI provenance.",
+    "Write tools remain unsigned preview builders and must pass simulation plus confirmation-gated unsigned Safe handoff."
+  ]
+}

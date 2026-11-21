@@ -1,0 +1,28 @@
+{
+  "chainId": 100,
+  "name": "Agreement",
+  "address": "0x59a15718992a42082ab2306bc6cbd662958a178c",
+  "source": "https://github.com/1Hive/agreement-app/blob/master/contracts/Agreement.sol",
+  "abiSha256": "0xd5022e534673e91618ae8b0d0f4aa20f6cd4acf7859f0c614e1af7205596cecd",
+  "bytecodeHash": "0xe9ceeeac70d569ac5c96b051ae87c43ed8aaca6ed2328010b1889414fa5b6963",
+  "selectors": {
+    "sign": "0x2fb1b25f",
+    "getSigner": "0x1180b553",
+    "getAction": "0xb6e76873",
+    "getChallenge": "0x1bdd4b74",
+    "getChallengeArbitratorFees": "0xf891e0e3",
+    "getCollateralRequirement": "0x221ce7c3",
+    "canChallenge": "0x6ab6802b",
+    "canClose": "0x76740b5b",
+    "canSettle": "0xdf69433b",
+    "canClaimSettlement": "0xcd2b85db",
+    "canDispute": "0xac1b2335",
+    "challengeAction": "0x36e21a57",
+    "settleAction": "0x3e838152",
+    "disputeAction": "0x2edc71ba",
+    "submitEvidence": "0xb9e9823f",
+    "closeAction": "0x3b92da72"
+  },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

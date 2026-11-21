@@ -1,0 +1,23 @@
+{
+  "scope": "Selected source files after local ERC20 appeals and Agreement bridge; not full build/deployment provenance",
+  "source": "local honey-v2 working tree; no root commit",
+  "files": {
+    "vendor/kleros-v2/HONEY_V2_BASE_COMMIT": "1f6e06c35e5d7de68dcb3bd808c8f9275c0436347996928099ee8885f8438356",
+    "vendor/kleros-v2/contracts/src/arbitration/KlerosCore.sol": "0d9246da2f941dca670b31740cdfaa4c5751a07c12b5c87b23ecb503e24d59b6",
+    "vendor/kleros-v2/contracts/src/arbitration/SortitionModule.sol": "95d7527911d45ee69cd5b3a2c4749cbfab134593bd39f604d8df859b11163def",
+    "vendor/kleros-v2/contracts/src/arbitration/dispute-kits/DisputeKitClassic.sol": "f1e35eefee084f368fa67a376e77fd71f106d5a687efdbae60906e0aaf0f32fb",
+    "vendor/kleros-v2/contracts/src/honey/HoneyStakeWeightStrategy.sol": "2fdb59aa010d1e5c59c5381c6be1e006ceadb94a0f2b45d3e03d5add8382b9af",
+    "src/court/IdentityRegistryEligibility.sol": "1d983c17fd7744bcf3d380cb887d8fdebe31943b688e883236ae744f7c0ea832",
+    "src/identity/IIdentityRegistry.sol": "ece65bebb7dce7b2b5e6dcf8b1d41959fbadb21004c4abc1a161d8292f3c0784",
+    "src/identity/IdentityRegistry.sol": "ae4ac750a2cc4262e2713142e704eb3bc2346514044557e3d731cc173ec585ec",
+    "src/identity/IdentityDelegationRegistry.sol": "6b8f018f6ace04ab8570274640b34aba4704faa9724503b3508960a4febc956d",
+    "src/optimistic/KlerosOptimisticArbitratorAdapter.sol": "d65692598c240acee42c5bf86b84594b9f0ae820b1ccfcf3f29cb62dcce68797",
+    "test/HoneyIdentitySortition.t.sol": "6f9a165897d63095d24a3b5a4b6220591416a7ae6f49342df34e725da2a17137",
+    "test/HoneyAppeals.t.sol": "5673983905cf0fb3b18f6c432e7b057408c55d8e8605fdcb802bc3109c1cb74d",
+    "src/optimistic/KlerosAgreementAdapter.sol": "bb9ab56c32e81dc0333102eebe286b90c830acd2b6f34750b8da8f6af6a939cc",
+    "test/KlerosAgreementAdapter.t.sol": "f83f9a2de1fecb1f6830b3717ed555167b9c4010b9f098b5f6c0fdc359b270dc",
+    "test/AgreementIntegration.t.sol": "ffc678ac50835e75c042fdb3af218bd6fdd5ed030914f62c4080ec140b816c82",
+    "scripts/build-agreement-fixtures.cjs": "ea5efde3ee57d1046e93ed62ca8a48b04cf75d47eef958d62dc44d6182e7229c",
+    "test/fixtures/agreement/DisputableFixture.sol.txt": "ed4015e438ad36a19421c1d242e2340a04b8958aee332e3baaaabb3403d816d1"
+  }
+}

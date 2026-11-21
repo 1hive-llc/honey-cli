@@ -1,0 +1,11 @@
+{
+  "chainId": 100,
+  "name": "HoneyswapFactory",
+  "address": "0xA818b4F111Ccac7AA31D0BCc0806d64F2E0737D7",
+  "source": "uniswap-v2-factory-fragment",
+  "abiSha256": "0xdf3da982c3c19f9489fd6292e7b621332288394188b049424fb9d53c23360a80",
+  "bytecodeHash": "0x383786f428c6b40ad2f9d1fc6851704123630a16b662b7b1ec0cc6a4002345a3",
+  "selectors": { "getPair": "0xe6a43905" },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

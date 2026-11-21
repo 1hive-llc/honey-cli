@@ -1,0 +1,17 @@
+{
+  "contractName": "CelesteVoting",
+  "addressSource": "CelesteCourt.getVoting()",
+  "chainId": 100,
+  "abiHash": "0xf644af75947a325746970d090497f7e29114b7c3f5a6c67aeee5a378c3660ef2",
+  "runtimeBytecodeHash": null,
+  "functions": {
+    "commit(uint256,bytes32)": "0xf2f03877",
+    "reveal(uint256,address,uint8,bytes32)": "0x5f38b99c",
+    "isValidOutcome(uint256,uint8)": "0xe2e7ed9f",
+    "getMaxAllowedOutcome(uint256)": "0x2aee0e66"
+  },
+  "notes": [
+    "Minimal ABI lock for Honey CLI Celeste commit/reveal keeper vote previews.",
+    "Voting module address is read from the allowlisted CelesteCourt at runtime and dynamically allowlisted only for the preview being built."
+  ]
+}

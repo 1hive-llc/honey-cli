@@ -1,0 +1,11 @@
+{
+  "chainId": 100,
+  "name": "HoneyswapRouter02",
+  "address": "0x1C232F01118CB8B424793ae03F870aa7D0ac7f77",
+  "source": "uniswap-v2-router02-fragment",
+  "abiSha256": "0xb78aaae47e84387b2e4b27d9858cf932319cafb9473364a6d4d0e3726789a356",
+  "bytecodeHash": "0xc66dd5b61f57881ae34945442841f99f0283e8822f5ffcc6eb1e7398f8b83dd1",
+  "selectors": { "getAmountsOut": "0xd06ca61f", "getAmountsIn": "0x1f00ca74", "swapExactTokensForTokens": "0x38ed1739", "swapTokensForExactTokens": "0x8803dbee" },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

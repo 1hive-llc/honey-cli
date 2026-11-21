@@ -1,0 +1,11 @@
+{
+  "chainId": 100,
+  "name": "Honeyswap HNY/WXDAI Pair",
+  "address": "0x4505b262DC053998C10685DC5F9098af8AE5C8ad",
+  "source": "uniswap-v2-pair-fragment",
+  "abiSha256": "0x7a94dcdc6e802688e3e035608b4cdedb8cee2748d7ce9567eab75843fa10b2cf",
+  "bytecodeHash": "0xa2775aba69cb8fc2df4bfe9b677890660132b0d7c657d5cc68789456f21a0fe8",
+  "selectors": { "getReserves": "0x0902f1ac", "token0": "0x0dfe1681", "token1": "0xd21220a7" },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

@@ -1,0 +1,11 @@
+{
+  "chainId": 100,
+  "name": "WXDAI",
+  "address": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+  "source": "erc20-fragment",
+  "abiSha256": "0x4dcf15cf803467b41b5cde11736c331508d421ba5de5d77a494d6ccf10ed6319",
+  "bytecodeHash": "0xdfff0c54be05b5df7dc8f015f8c813825344770fee1ba1202130a4652b529ca9",
+  "selectors": { "symbol": "0x95d89b41", "decimals": "0x313ce567", "balanceOf": "0x70a08231", "allowance": "0xdd62ed3e", "approve": "0x095ea7b3", "transfer": "0xa9059cbb" },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

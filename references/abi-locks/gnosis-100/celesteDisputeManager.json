@@ -1,0 +1,20 @@
+{
+  "contractName": "CelesteDisputeManager",
+  "addressSource": "CelesteCourt.getDisputeManager()",
+  "chainId": 100,
+  "abiHash": "0x467b7aa8b18f9bee87c1d03b706f695cdec476b43c06b9758b5249c7acf265d6",
+  "runtimeBytecodeHash": null,
+  "functions": {
+    "createAppeal(uint256,uint256,uint8)": "0x0d03d126",
+    "confirmAppeal(uint256,uint256,uint8)": "0x9c0065f7",
+    "settleReward(uint256,uint256,address)": "0x82a8b3b0",
+    "getDispute(uint256)": "0xe3a96cbd",
+    "getNextRoundDetails(uint256,uint256)": "0xcd604ada",
+    "getJuror(uint256,uint256,address)": "0x4b4acfd3"
+  },
+  "notes": [
+    "Minimal ABI lock for Honey CLI Celeste appeal, confirm-appeal, reward status, and settleReward previews.",
+    "Dispute manager address is read from the allowlisted CelesteCourt at runtime and dynamically allowlisted only for the preview being built.",
+    "Appeals require fee-token allowance and deposits; reward settlement can assign HNY/fee-token balances according to final ruling/coherence. Previews must remain unsigned until onehive_tx_submit confirmation handoff."
+  ]
+}

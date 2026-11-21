@@ -1,0 +1,11 @@
+{
+  "chainId": 100,
+  "name": "HNY",
+  "address": "0x71850b7E9Ee3f13Ab46d67167341E4bDc905Eef9",
+  "source": "erc20-fragment",
+  "abiSha256": "0x4dcf15cf803467b41b5cde11736c331508d421ba5de5d77a494d6ccf10ed6319",
+  "bytecodeHash": "0x77b4d5a24f08e58d0ab655c360b73e45767eb2adb0ad4d3190bceee07ec39927",
+  "selectors": { "symbol": "0x95d89b41", "decimals": "0x313ce567", "balanceOf": "0x70a08231", "allowance": "0xdd62ed3e", "approve": "0x095ea7b3", "transfer": "0xa9059cbb" },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

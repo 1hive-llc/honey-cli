@@ -1,0 +1,19 @@
+{
+  "contractName": "CelesteCourt",
+  "address": "0x44E4fCFed14E1285c9e0F6eae77D5fDd0F196f85",
+  "chainId": 100,
+  "abiHash": "0x8490cce62ad9de9b23b5ee4e3d7b184e4e65079bc35d8225339483aa14818af5",
+  "runtimeBytecodeHash": null,
+  "functions": {
+    "getCurrentTermId()": "0x08135a93",
+    "getNeededTermTransitions()": "0x50c36580",
+    "getTermDuration()": "0x22f8f6f3",
+    "getVoting()": "0x1986d376",
+    "getDisputeManager()": "0xdb9bee46",
+    "heartbeat(uint64)": "0x9bf6fa57"
+  },
+  "notes": [
+    "Minimal ABI lock for Honey CLI court status, voting/dispute-manager module discovery, and explicit heartbeat term updates.",
+    "heartbeat(uint64) is a state-changing court-clock operation and must remain unsigned-preview-only until onehive_tx_submit confirmation handoff."
+  ]
+}

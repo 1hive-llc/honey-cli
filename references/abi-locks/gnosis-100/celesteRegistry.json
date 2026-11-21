@@ -1,0 +1,19 @@
+{
+  "contractName": "CelesteJurorsRegistry",
+  "address": "0x8C9968a2b16bc1cD0eaD74F5eeF25E899e795501",
+  "chainId": 100,
+  "abiHash": "0x275a63a37faeacab4e884b09b601a5e5be5b9a1fd4a239c42df624676c2db056",
+  "runtimeBytecodeHash": null,
+  "functions": {
+    "stakeFor(address,uint256,bytes)": "0x0ef96356",
+    "unstake(uint256,bytes)": "0xc8fd6ed0",
+    "activate(uint256)": "0xb260c42a",
+    "deactivate(uint256)": "0x916b9bef",
+    "balanceOf(address)": "0x70a08231",
+    "activeBalanceOf(address)": "0x59f769a9"
+  },
+  "notes": [
+    "Minimal ABI lock for Honey CLI Celeste HNY staking/activation previews.",
+    "Keeper staking and activation can create Celeste voting/reveal duties and missed-duty penalties."
+  ]
+}

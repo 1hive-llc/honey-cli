@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Honey · Governance pilot</title>
+  <link rel="stylesheet" href="/bootstrap.min.css"><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script>
+</head>
+<body>
+<a class="skip-link visually-hidden-focusable" href="#main-content">Skip to content</a>
+<div class="app-frame">
+  <header class="app-nav">
+    <a href="/" class="brand"><span class="brand-mark" aria-hidden="true">1h</span><span>Honey</span><span class="brand-byline">by 1Hive</span></a>
+    <nav aria-label="Governance views"><button data-tab="proposals" aria-current="page" aria-label="Conviction proposals" class="btn"><svg aria-hidden="true" focusable="false" class="lucide lucide-file-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" /> <path d="M14 2v5a1 1 0 0 0 1 1h5" /> <path d="M10 9H8" /> <path d="M16 13H8" /> <path d="M16 17H8" /> </svg><span>Proposals</span></button><button data-tab="votes" class="btn"><svg aria-hidden="true" focusable="false" class="lucide lucide-circle-check" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <circle cx="12" cy="12" r="10" /> <path d="m9 12 2 2 4-4" /> </svg><span>Decision votes</span></button><button data-tab="cases" class="btn"><svg aria-hidden="true" focusable="false" class="lucide lucide-scale" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /> <path d="M7 21h10" /> <path d="M12 3v18" /> <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" /> </svg><span>Kleros cases</span></button><button data-tab="jury-inbox" class="btn"><svg aria-hidden="true" focusable="false" class="lucide lucide-users" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <path d="M16 3.128a4 4 0 0 1 0 7.744" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <circle cx="9" cy="7" r="4" /> </svg><span>My Jury inbox</span></button><button id="stake" type="button" class="btn"><svg aria-hidden="true" focusable="false" class="lucide lucide-layers" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /> </svg><span>My stake</span></button></nav>
+    <div class="environment"><span id="environment-mode" class="mode">No live transactions</span></div>
+  </header>
+  <main id="main-content">
+    <section class="intro"><div><h1 id="section-title">Conviction proposals</h1><p id="source"></p></div>
+      <div class="page-actions"><button id="refresh" type="button" aria-label="Refresh" class="btn">Refresh</button><button id="preview" class="btn primary">Preview a proposal</button></div></section>
+    <section class="panel" aria-labelledby="section-title">
+    <form id="inbox-form" class="filters" hidden>
+      <label>Inbox public wallet address<input id="inbox-account" required pattern="0x[0-9A-Fa-f]{40}" maxlength="42" placeholder="0x…" autocomplete="off" spellcheck="false" class="form-control"></label>
+      <button class="btn primary">Find my cases</button><button id="inbox-demo" type="button" hidden class="btn">Try the demo juror</button>
+    </form>
+    <div class="filters" id="record-filters"><label class="filter">Search this page<input id="filter" type="search" placeholder="Search by title or state" autocomplete="off" class="form-control"></label>
+      <label id="index-filter" hidden>Indexed state<select class="form-select" id="indexed-state"><option value="">All states</option>
+        <option value="active">Active</option><option value="challenged">Challenged</option><option value="disputed">Disputed</option>
+        <option value="executed">Executed</option><option value="cancelled">Cancelled</option><option value="rejected">Rejected</option><option value="settled">Settled</option>
+      </select></label>
+      <label id="case-filter" hidden>Show<select class="form-select" id="case-state"><option value="Active Kleros case">Active cases</option><option value="">Active, awaiting and unknown</option><option value="Awaiting Agreement resolution">Awaiting resolution</option><option value="Unknown">Unknown</option></select></label>
+      <form id="lookup"><label>Open by ID<input id="lookup-id" required inputmode="numeric" pattern="0|[1-9][0-9]{0,77}" maxlength="78" placeholder="Record ID" autocomplete="off" class="form-control"></label><button class="btn">Open</button></form></div>
+    <div class="workspace"><div class="records"><div id="results"></div><p id="notice" class="notice" role="status"></p>
+    <div class="pager"><span id="page">Page 1</span><div><button id="previous" disabled class="btn">Previous</button><button id="next" disabled class="btn">Next</button></div></div>
+    </div><div id="record-pane" class="record-pane"><p class="pane-empty">Select a record to see its status and available actions.</p></div></div>
+  </section>
+  <details class="sources"><summary>Data sources</summary><p id="context" aria-live="polite">Reading profile…</p><div id="scope"></div></details>
+  <p class="footnote">App details and Agreement links are read at one RPC block per query.</p>
+</main>
+</div>
+<dialog id="dialog" aria-labelledby="dialog-title">
+  <div class="dialog-head"><h2 id="dialog-title" tabindex="-1">Record</h2><button id="close" type="button" class="btn">Close</button></div>
+  <div id="detail" aria-live="polite"></div>
+</dialog>
+<template id="escalation-quote">
+  <h3>Escalate to arbitration</h3>
+  <p>Check the action submitter’s public address and fee before the challenge deadline. Actual escalation would dispute the challenge, risk collateral and require a new fee. The browser only simulates.</p>
+  <form autocomplete="off">
+    <label>Action submitter address<input name="account" required pattern="0x[0-9A-Fa-f]{40}" maxlength="42" placeholder="0x…" spellcheck="false" class="form-control"></label>
+    <button class="btn">Load escalation quote</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="escalation-form">
+  <form><button class="btn">Simulate escalation</button></form>
+  <div role="status"></div>
+</template>
+<template id="evidence-party">
+  <h3>Party evidence</h3>
+  <p>Check whether a public address is the submitter or challenger in this dispute. A juror assignment does not confer party status.</p>
+  <form autocomplete="off">
+    <label>Party public address<input name="account" required pattern="0x[0-9A-Fa-f]{40}" maxlength="42" placeholder="0x…" spellcheck="false" class="form-control"></label>
+    <button class="btn">Check evidence eligibility</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="evidence-form">
+  <p>Enter a short synthetic text reference or an ipfs:// CID, not a file or web link. Only the local simulator receives it. If actually submitted, the reference would be public. Nothing is uploaded, hosted or fetched.</p>
+  <form autocomplete="off">
+    <label>Public evidence reference<textarea class="form-control" name="reference" required maxlength="500" placeholder="Synthetic exhibit A"></textarea></label>
+    <button class="btn">Simulate party evidence</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="challenge-quote">
+  <h3>Agreement challenge</h3>
+  <p>Read a quote before simulating. In a real challenge, the challenger risks the collateral and pays the arbitrator fee into escrow. This quote does not include network gas. This browser cannot open a challenge.</p>
+  <form autocomplete="off">
+    <label>Challenger public address<input name="account" required pattern="0x[0-9A-Fa-f]{40}" maxlength="42" placeholder="0x…" spellcheck="false" class="form-control"></label>
+    <button class="btn">Load challenge quote</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="challenge-form">
+  <h4>Proposed settlement</h4>
+  <p>The offer comes from the submitter’s already-locked collateral. It is not added to the challenger’s escrow. The preview sends the offer and context only to the local simulator. Context would be public if submitted.</p>
+  <form autocomplete="off">
+    <label>Settlement offer (HNY)<input name="offerHny" required inputmode="decimal" pattern="[0-9]+(\.[0-9]{1,18})?" maxlength="79" class="form-control"></label>
+    <label>Challenge context<textarea class="form-control" name="context" required maxlength="500"></textarea></label>
+    <button class="btn">Simulate Agreement challenge</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="decision-form">
+  <h3>Decision ballot</h3>
+  <p>This is a governance vote, not a jury ruling. The configured local RPC receives the public voter address and choice. No vote is cast.</p>
+  <form autocomplete="off">
+    <label>Decision voter address<input name="account" required pattern="0x[0-9A-Fa-f]{40}" maxlength="42" placeholder="0x…" spellcheck="false" class="form-control"></label>
+    <label>Decision ballot choice<select class="form-select" name="choice" required><option value="">Choose a side</option><option value="yea">Yea</option><option value="nay">Nay</option></select></label>
+    <button class="btn">Simulate Decision ballot</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="allowance-form">
+  <h3>Stake token allowance</h3>
+  <p>An allowance lets Kleros Core spend HNY. Preview a separate token approval or clear it to zero. Neither changes your stake.</p>
+  <form autocomplete="off">
+    <label>Allowance operation<select class="form-select" name="mode"><option value="increase">Approve for a stake increase</option><option value="clear">Clear allowance</option></select></label>
+    <label>Desired total court stake (HNY)<input name="target" required inputmode="decimal" pattern="[0-9]+(\.[0-9]{1,18})?" maxlength="79" class="form-control"></label>
+    <button class="btn">Simulate allowance</button>
+  </form>
+  <div role="status"></div>
+</template>
+<template id="proposal-form">
+  <p>Simulate a Conviction proposal with an explicit actor. The configured RPC receives the actor, beneficiary and proposal fields.</p>
+  <form id="simulate" autocomplete="off">
+    <label>Actor address<input name="from" required pattern="0x[0-9A-Fa-f]{40}" placeholder="0x…" class="form-control"></label>
+    <label>Beneficiary address<input name="beneficiary" required pattern="0x[0-9A-Fa-f]{40}" placeholder="0x…" class="form-control"></label>
+    <label>Proposal title<input name="title" required maxlength="160" class="form-control"></label>
+    <label>Proposal link<input name="link" required maxlength="512" placeholder="https://… or ipfs://…" class="form-control"></label>
+    <label>Requested amount<input name="amount" required inputmode="decimal" placeholder="0.0" class="form-control"></label>
+    <label class="check"><input type="checkbox" name="stable">Use stable request amount</label>
+    <button class="btn primary">Simulate proposal</button>
+  </form>
+  <div id="simulation" role="status"></div>
+</template>
+</body></html>

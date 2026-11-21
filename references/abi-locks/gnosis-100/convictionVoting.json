@@ -1,0 +1,21 @@
+{
+  "chainId": 100,
+  "name": "ConvictionVoting",
+  "address": "0x0b21081c6f8b1990f53fc76279cc41ba22d7afe2",
+  "source": "official-repo",
+  "sourceUrl": "https://github.com/1Hive/conviction-voting-app/blob/master/contracts/ConvictionVoting.sol",
+  "abiSha256": "0x572a594a592240f616bad107eb62924f26d76dd460831623978c084710bbf67e",
+  "bytecodeHash": "0xe9ceeeac70d569ac5c96b051ae87c43ed8aaca6ed2328010b1889414fa5b6963",
+  "selectors": {
+    "getProposal": "0xc7f758a8",
+    "addProposal": "0x4ef4d13f",
+    "stakeToProposal": "0xfc370051",
+    "stakeAllToProposal": "0x1df67d2f",
+    "withdrawFromProposal": "0x649c649c",
+    "withdrawAllFromProposal": "0x4fb3cbbc",
+    "executeProposal": "0x0d61b519",
+    "cancelProposal": "0xe0a8f6f5"
+  },
+  "reviewedAt": "2026-06-22",
+  "reviewer": "pi"
+}

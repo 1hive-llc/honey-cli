@@ -1,0 +1,30 @@
+node_modules/
+dist/
+coverage/
+.codex/
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Pi/Honey runtime state and generated operator artifacts.
+# Keep these local: deleting live session files can hang or destabilize Pi.
+.pi/sessions/
+.pi/walletconnect/
+.pi/keystore/
+sessions/
+walletconnect-*.png
+walletconnect-*.json
+heartbeat-*.json
+preview*.json
+*-preview.json
+tx-preview*.json
+
+# Generated one-off agent planning artifacts. Keep canonical docs under docs/.
+/context.md
+/plan.md
+/progress.md
+/research.md
+
+*.log
+.DS_Store
